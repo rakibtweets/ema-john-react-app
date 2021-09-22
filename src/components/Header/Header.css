@@ -1,0 +1,15 @@
+.header {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+.logo {
+  height: 3.5em;
+}
+.nav-link {
+  color: white;
+  transition: 0.3s;
+}
+.nav-link:hover {
+  background-color: rgb(5, 170, 107);
+  color: white;
+}
