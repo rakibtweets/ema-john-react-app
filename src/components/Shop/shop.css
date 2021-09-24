@@ -1,3 +1,7 @@
+.search__container {
+  background-color: rgba(0, 0, 0, 0.603);
+  padding: 1em;
+}
 .shop__container {
   display: grid;
   grid-template-columns: 3fr 1fr;
