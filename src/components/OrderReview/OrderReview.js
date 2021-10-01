@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import useCart from '../../hooks/useCart';
 import useProducts from '../../hooks/useProducts';
-import { deleteFromDb } from '../../utilities/fakedb';
+import { clearTheCart, deleteFromDb } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import ReviewItem from '../ReviewItem/ReviewItem';
 import './OrderReview.css';
@@ -13,6 +14,11 @@ const OrderReview = () => {
     const newCart = cart.filter((product) => product.key !== key);
     setCart(newCart);
     deleteFromDb(key);
+  };
+
+  const handlePlaceOrder = () => {
+    setCart([]);
+    clearTheCart();
   };
   return (
     <div>
@@ -27,7 +33,13 @@ const OrderReview = () => {
           ))}
         </div>
         <div className="cart__container">
-          <Cart cart={cart} />
+          <Cart cart={cart}>
+            <Link to="/placeOrder">
+              <button onClick={handlePlaceOrder} className="btn btn-warning">
+                place order
+              </button>
+            </Link>
+          </Cart>
         </div>
       </div>
     </div>
