@@ -6,7 +6,7 @@
     "seller": "3M",
     "wholePrice": "68",
     "priceFraction": "36",
-    "stock": 36,
+    "stock": 35,
     "star": 3,
     "starCount": 3245,
     "img": "https://images-na.ssl-images-amazon.com/images/I/415oziPFA0L._AC_US218_.jpg",
@@ -21,7 +21,7 @@
         "value": "PC"
       }
     ],
-    "price": 68.36,
+    "price": 68.35,
     "shipping": 7.99
   },
   {
@@ -29,7 +29,7 @@
     "category": "laptop",
     "name": "Manfrotto MB LF-WN-BP camera & laptop backpack for DSLR Lifestyle Windsor, grey",
     "seller": "Manfrotto",
-    "wholePrice": "169",
+    "wholePrice": "166",
     "priceFraction": "88",
     "stock": 55,
     "star": 2,
