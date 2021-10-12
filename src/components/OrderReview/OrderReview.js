@@ -34,9 +34,9 @@ const OrderReview = () => {
         </div>
         <div className="cart__container">
           <Cart cart={cart}>
-            <Link to="/placeOrder">
+            <Link to="/shipping">
               <button onClick={handlePlaceOrder} className="btn btn-warning">
-                place order
+                Procced to Shipping
               </button>
             </Link>
           </Cart>

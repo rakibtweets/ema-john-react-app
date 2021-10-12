@@ -1,10 +1,24 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import './Login.css';
 
 const Login = () => {
-  const { handleSignWithGoogle } = useAuth();
+  const { signWithGoogle, setError, setUser } = useAuth();
+  const location = useLocation();
+  console.log('came from', location.state?.from);
+  const history = useHistory();
+  const redirectUrl = location?.state?.from || '/';
+  const handleSignWithGoogle = () => {
+    signWithGoogle()
+      .then((result) => {
+        setUser(result.user);
+        history.push(redirectUrl);
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
+  };
   return (
     <div className="login-user-container container">
       <h3 className="text-center text-primary my-3">Please Login</h3>
