@@ -38,6 +38,7 @@ const Shop = () => {
       setCart(storedCart);
     }
   }, [products]); // dependency
+  // add to cart
   const handleAddToCart = (product) => {
     const exist = cart.find((pd) => pd.key === product.key);
     let newCart = [];
